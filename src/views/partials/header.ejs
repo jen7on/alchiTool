@@ -23,10 +23,10 @@ var effects = Object.keys(wirkungen)
                             <div class="row px-0">
                                 <div class="col-md-2 form-group w-100 my-0 pr-1 pl-0">
                                     <select class="form-control" name="effect[0]" id="courseInput"required>
-                                        <option value="0" selected>Bitte wählen</option>
+                                        <option value="0">Bitte wählen</option>
                                         <% { 
                                             effects.forEach(function (name) {
-                                            %><option value="<%=name%>"><%=wirkungen[name].name%></option><%
+                                            %><option value="<%=name%>"<%if(name==selectedeffects[0]) {%> selected<%}%>><%=wirkungen[name].name%></option><%
                                             })
                                             %>
                                         <% } %>
@@ -37,7 +37,7 @@ var effects = Object.keys(wirkungen)
                                         <option value="0" selected>Bitte wählen</option>
                                         <% { 
                                             effects.forEach(function (name) {
-                                            %><option value="<%=name%>"><%=wirkungen[name].name%></option><%
+                                            %><option value="<%=name%>"<%if(name==selectedeffects[1]) {%> selected<%}%>><%=wirkungen[name].name%></option><%
                                             })
                                             %>
                                         <% } %>
@@ -48,7 +48,7 @@ var effects = Object.keys(wirkungen)
                                         <option value="0" selected>Bitte wählen</option>
                                         <% { 
                                             effects.forEach(function (name) {
-                                            %><option value="<%=name%>"><%=wirkungen[name].name%></option><%
+                                            %><option value="<%=name%>"<%if(name==selectedeffects[2]) {%> selected<%}%>><%=wirkungen[name].name%></option><%
                                             })
                                             %>
                                         <% } %>
@@ -59,7 +59,7 @@ var effects = Object.keys(wirkungen)
                                         <option value="0" selected>Bitte wählen</option>
                                         <% { 
                                             effects.forEach(function (name) {
-                                            %><option value="<%=name%>"><%=wirkungen[name].name%></option><%
+                                            %><option value="<%=name%>"<%if(name==selectedeffects[3]) {%> selected<%}%>><%=wirkungen[name].name%></option><%
                                             })
                                             %>
                                         <% } %>
@@ -68,12 +68,12 @@ var effects = Object.keys(wirkungen)
                                 <div class="col-md-4 form-group w-100 my-0 pr-1 pl-0 text-light">
                                     <div class="row p-0 m-0">
                                         <div class="col-12 form-group w-100 m-0 py-0 text-light">
-                                            <input type="checkbox" class="form-check-label" id="exampleCheck1" disabled>
-                                            <label class="form-check-label" for="exampleCheck1">Nur exakte</label>
+                                            <input type="checkbox" class="form-check-label" name="checkExact" id="checkExact" value="true">
+                                            <label class="form-check-label" for="checkExact">Nur exakte</label>
                                         </div>
                                         <div class="col-12 form-group w-100 m-0 text-light">
-                                            <input type="checkbox" class="form-check-label" id="exampleCheck1" disabled>
-                                            <label class="form-check-label" for="exampleCheck1">Ohne negative</label>
+                                            <input type="checkbox" class="form-check-label" name="checkNegative" id="checkNegative" value="true">
+                                            <label class="form-check-label" for="checkNegative">Ohne negative</label>
                                         </div>
                                     </div>
                                 </div>

@@ -4,11 +4,11 @@ var allEffects = Object.values(wirkungen)
 const reags = [
     {
         name: "Alraunenwurzel",
-        preis: 5,
+        preis: 10,
         wirkungen: [wirkungen.staerke, wirkungen.intelligenz, wirkungen.giftres, wirkungen.blindheit]
     },{
         name: "Apfel",
-        preis: 5,
+        preis: 12,
         wirkungen: [wirkungen.staerke, wirkungen.heilung, wirkungen.last, wirkungen.haarwuchs]
     },{
         name: "Bims",
@@ -16,51 +16,51 @@ const reags = [
         wirkungen: [wirkungen.feder, wirkungen.nachtsicht, wirkungen.feuerres, wirkungen.energieres]
     },{
         name: "Blut",
-        preis: 5,
+        preis: 7,
         wirkungen: [wirkungen.staerke, wirkungen.tollpatsch, wirkungen.intelligenz]
     },{
         name: "Blutmoos",
-        preis: 5,
+        preis: 12,
         wirkungen: [wirkungen.geschick, wirkungen.schwachsinn, wirkungen.schminke, wirkungen.krankres]
     },{
         name: "Champignon",
-        preis: 5,
+        preis: 10,
         wirkungen: [wirkungen.intelligenz, wirkungen.hunger, wirkungen.saettigung, wirkungen.haarwuchs]
     },{
         name: "Coeliumerz",
-        preis: 5,
+        preis: 200,
         wirkungen: [wirkungen.energieres, wirkungen.energieschaden, wirkungen.nachtsicht, wirkungen.enthuellung]
     },{
         name: "Daemonenknochen",
-        preis: 5,
+        preis: 300,
         wirkungen: [wirkungen.antimagieres, wirkungen.physres, wirkungen.mana, wirkungen.antiphysres]
     },{
         name: "Drachenblut",
-        preis: 5,
+        preis: 500,
         wirkungen: [wirkungen.mana, wirkungen.magieres, wirkungen.schlaf, wirkungen.zauberloesen]
     },{
         name: "Eisen",
-        preis: 5,
+        preis: 10,
         wirkungen: [wirkungen.schutz, wirkungen.staerke, wirkungen.schwachsinn, wirkungen.tollpatsch]
     },{
         name: "Efeu",
-        preis: 5,
+        preis: 10,
         wirkungen: [wirkungen.giftschaden, wirkungen.schlaf, wirkungen.heilung, wirkungen.unsichtbarkeit]
     },{
         name: "Fingerhut",
-        preis: 5,
+        preis: 10,
         wirkungen: [wirkungen.krankleicht, wirkungen.antienergieres, wirkungen.antipara]
     },{
         name: "Fledermausflügel",
-        preis: 5,
+        preis: 8,
         wirkungen: [wirkungen.feder, wirkungen.antimana, wirkungen.blindheit, wirkungen.krankres]
     },{
         name: "Fliegenpilz",
-        preis: 5,
+        preis: 15,
         wirkungen: [wirkungen.giftschaden, wirkungen.antimana, wirkungen.antilife, wirkungen.mana]
     },{
         name: "Ginseng",
-        preis: 5,
+        preis: 10,
         wirkungen: [wirkungen.heilung, wirkungen.erfrischung, wirkungen.antigift, wirkungen.krankleicht]
     },{
         name: "Grabmoos",
@@ -68,15 +68,15 @@ const reags = [
         wirkungen: [wirkungen.schminke , wirkungen.heilung, wirkungen.schutz, wirkungen.halluzination]
     },{
         name: "Henkerskappe",
-        preis: 5,
+        preis: 30,
         wirkungen: [wirkungen.paralyse, wirkungen.mana, wirkungen.zauberloesen, wirkungen.blindheit]
     },{
         name: "Kaktus",
-        preis: 5,
+        preis: 15,
         wirkungen: [wirkungen.feder, wirkungen.haarausfall, wirkungen.saettigung, wirkungen.krankres]
     },{
         name: "Knoblauch",
-        preis: 5,
+        preis: 10,
         wirkungen: [wirkungen.antigift, wirkungen.krankres, wirkungen.krankschwer, wirkungen.giftres]
     },{
         name: "Knochen",
@@ -84,7 +84,7 @@ const reags = [
         wirkungen: [wirkungen.schwaeche, wirkungen.magieres, wirkungen.kaltschaden]
     },{
         name: "Kroetenlaich",
-        preis: 5,
+        preis: 15,
         wirkungen: [wirkungen.infizieren, wirkungen.antipara, wirkungen.tollpatsch, wirkungen.saeureschaden]
     },{
         name: "Kupfer",
@@ -92,31 +92,31 @@ const reags = [
         wirkungen: [wirkungen.schutz, wirkungen.geschick, wirkungen.schwachsinn, wirkungen.schwaeche]
     },{
         name: "Lehm",
-        preis: 5,
+        preis: 10,
         wirkungen: [wirkungen.saettigung, wirkungen.saeureschaden, wirkungen.physres, wirkungen.blindheit]
     },{
         name: "Limone",
-        preis: 5,
+        preis: 10,
         wirkungen: [wirkungen.krankleicht, wirkungen.antigift, wirkungen.antifeuerres, wirkungen.saeureschaden]
     },{
         name: "Molchauge",
-        preis: 5,
+        preis: 15,
         wirkungen: [wirkungen.antiphysres, wirkungen.haarausfall, wirkungen.schwaeche, wirkungen.halluzination]
     },{
         name: "Nachtschatten",
-        preis: 5,
+        preis: 10,
         wirkungen: [wirkungen.giftschaden, wirkungen.antilife, wirkungen.nachtsicht, wirkungen.krankschwer]
     },{
         name: "Obsidian",
-        preis: 5,
+        preis: 30,
         wirkungen: [wirkungen.feuerschaden, wirkungen.giftschaden, wirkungen.unsichtbarkeit, wirkungen.krankleicht]
     },{
         name: "Pfirsich",
-        preis: 5,
+        preis: 10,
         wirkungen: [wirkungen.erfrischung, wirkungen.krankleicht, wirkungen.antipara, wirkungen.geschick]
     },{
         name: "Pyrianerz",
-        preis: 5,
+        preis: 250,
         wirkungen: [wirkungen.feuerres, wirkungen.feuerschaden, wirkungen.last, wirkungen.enthuellung]
     },{
         name: "Rattenfleisch",
@@ -128,55 +128,55 @@ const reags = [
         wirkungen: [wirkungen.antilife, wirkungen.unsichtbarkeit, wirkungen.physres, wirkungen.schutz]
     },{
         name: "Roher Vogel",
-        preis: 5,
+        preis: 20,
         wirkungen: [wirkungen.saettigung, wirkungen.energieres, wirkungen.infizieren, wirkungen.haarwuchs]
     },{
         name: "Schlangenschuppe",
-        preis: 5,
+        preis: 15,
         wirkungen: [wirkungen.infizieren, wirkungen.hunger, wirkungen.nachtsicht, wirkungen.haarausfall]
     },{
         name: "Schwarze Perle",
-        preis: 5,
+        preis: 15,
         wirkungen: [wirkungen.erfrischung, wirkungen.staerke, wirkungen.blindheit, wirkungen.zauberloesen]
     },{
         name: "Schwefel",
-        preis: 5,
+        preis: 25,
         wirkungen: [wirkungen.schlaf, wirkungen.intelligenz, wirkungen.antimana, wirkungen.antilife]
     },{
         name: "Schwefelasche",
-        preis: 5,
+        preis: 15,
         wirkungen: [wirkungen.feuerschaden, wirkungen.antifeuerres, wirkungen.giftschaden, wirkungen.geschick]
     },{
         name: "Seerose",
-        preis: 5,
+        preis: 12,
         wirkungen: [wirkungen.schlaf, wirkungen.schwachsinn, wirkungen.krankschwer, wirkungen.haarausfall]
     },{
         name: "Spinnenseide",
-        preis: 5,
+        preis: 10,
         wirkungen: [wirkungen.nachtsicht, wirkungen.paralyse, wirkungen.giftres, wirkungen.feder]
     },{
         name: "Torf",
-        preis: 5,
+        preis: 15,
         wirkungen: [wirkungen.schwaeche, wirkungen.zauberloesen, wirkungen.antigiftres, wirkungen.last]
     },{
         name: "Totes Holz",
-        preis: 5,
+        preis: 25,
         wirkungen: [wirkungen.krankleicht, wirkungen.staerke, wirkungen.halluzination, wirkungen.kaltschaden]
     },{
         name: "Trauben (rot)",
-        preis: 5,
+        preis: 12,
         wirkungen: [wirkungen.staerke, wirkungen.heilung, wirkungen.hunger, wirkungen.feder]
     },{
         name: "Trauben (grün)",
-        preis: 5,
+        preis: 12,
         wirkungen: [wirkungen.staerke, wirkungen.heilung, wirkungen.paralyse, wirkungen.haarwuchs]
     },{
         name: "Vulkanasche",
-        preis: 5,
+        preis: 15,
         wirkungen: [wirkungen.saeureschaden, wirkungen.schwaeche, wirkungen.antimagieres, wirkungen.feuerres]
     },{
         name: "Weicheisen",
-        preis: 5,
+        preis: 25,
         wirkungen: [wirkungen.last, wirkungen.saettigung, wirkungen.antienergieres, wirkungen.feuerres]
     },{
         name: "Wyrmherz",
@@ -184,7 +184,7 @@ const reags = [
         wirkungen: [wirkungen.unsichtbarkeit, wirkungen.heilung, wirkungen.schutz, wirkungen.magieres]
     },{
         name: "Zitrone",
-        preis: 5,
+        preis: 10,
         wirkungen: [wirkungen.krankleicht, wirkungen.antigift, wirkungen.antifeuerres, wirkungen.saeureschaden]
     },{
         name: "Zwiebeln",
@@ -285,7 +285,7 @@ for(var w=0;w<Object.keys(possibleReagents).length;w++)
 function checkRequirements(requiredEffects, currentEffects, reqEffectsCount) {
     var returnCount = 0
     requiredEffects.forEach(function (effect) {
-        if(currentEffects[effect] >= 2) {
+        if(currentEffects[effect] == 2) {
 
             returnCount++
         }
@@ -355,19 +355,52 @@ function Potion(ingredients, effects, type, price) {
     this.type=type
     this.price=price
 }
+function compare(a,b) {
+    if (a.ingredients < b.ingredients)
+      return -1;
+    if (a.ingredients > b.ingredients)
+      return 1;
+    if (a.ingredients == b.ingredients)
+        return 1;
+    return 0;
+  }
+
+  function compareLength(a,b) {
+    if (a.ingredients.split(', ').length < b.ingredients.split(', ').length)
+      return -1;
+    if (a.ingredients.split(', ').length > b.ingredients.split(', ').length)
+      return 1;
+    if (a.ingredients.split(', ').length == b.ingredients.split(', ').length)
+        return 1;
+    return 0;
+  }
+  
 
 function removeDuplicates(potions) {
-    potions.forEach(function (a, index, arr) {
-        potions.forEach(function (b){
-            if(a.ingredients === b.ingredients) {
-                potions.splice(index, 1)
-            }
-        })
-    })
-    return potions
+    const uniqueArray = potions.filter((thing,index) => {
+        return index === potions.findIndex(obj => {
+          return JSON.stringify(obj) === JSON.stringify(thing);
+        });
+      });
+    
+      potions = potions.sort(compare)
+    return uniqueArray
 }
 
-function validCombinations(combinations, wantedEffects, allEffects) {
+function lookingForNegativeEffects(effects) {
+    var returnBool = false
+    effects.forEach(function (effect) {
+        if(effect.type == 0) {
+            returnBool = true
+        }
+    })
+    return returnBool;
+}
+
+function validCombinations(combinations, wantedEffects, allEffects, options) {
+    var lookingForNegatives = lookingForNegativeEffects(wantedEffects)
+    var onlyExact = options[0]
+    var noNegatives = options[1]
     var requiredEffects = []
     wantedEffects.map(function (effect) {
         requiredEffects.push(effect.name)
@@ -391,7 +424,7 @@ function validCombinations(combinations, wantedEffects, allEffects) {
         var anotherArr = []
         if(requiredEffects.every(elem => Object.keys(currentEffectList).indexOf(elem) > -1) && checkRequirements(requiredEffects, currentEffectList, requiredEffects.length)) {
         var combinationType = checkForOtherEffects(requiredEffects, currentEffectList, allEffects) 
-            //console.log(combinationType)              
+                      
             if(combinationType == "bad") {
                 badCombinations.push(combination)
             }
@@ -403,6 +436,9 @@ function validCombinations(combinations, wantedEffects, allEffects) {
             }
         }
     })
+    var returnPureCombinations = []
+    var returnOtherCombinations = []
+    var returnBadCombinations = []
 
     pureCombinations.map(function (combination, index) {
         var arr = Array.from(combination)
@@ -412,31 +448,46 @@ function validCombinations(combinations, wantedEffects, allEffects) {
             nameArr.push(value.name)
         })
         var tempPotion = new Potion(nameArr.join(', '), effArr.join(', '),"text-success",0)
-        allCombinations.push(tempPotion)
+        returnPureCombinations.push(tempPotion)
+    })
+    returnPureCombinations = removeDuplicates(returnPureCombinations)
+    returnPureCombinations.forEach(function (pureCombination) {
+        allCombinations.push(pureCombination)
     })
 
-    otherCombinations.map(function (combination, index) {
-        var arr = Array.from(combination)
-        nameArr = []
-        effArr = getCombinationEffects(combination)
-        arr.map(function (value) {
-            nameArr.push(value.name)
+    if(onlyExact != "true") {
+        otherCombinations.map(function (combination, index) {
+            var arr = Array.from(combination)
+            nameArr = []
+            effArr = getCombinationEffects(combination)
+            arr.map(function (value) {
+                nameArr.push(value.name)
+            })
+            var tempPotion = new Potion(nameArr.join(', '), effArr.join(', '),"text-warning",0)
+            returnOtherCombinations.push(tempPotion)
         })
-        var tempPotion = new Potion(nameArr.join(', '), effArr.join(', '),"text-warning",0)
-        allCombinations.push(tempPotion)
-    })
+        returnOtherCombinations = removeDuplicates(returnOtherCombinations)
+        returnOtherCombinations.forEach(function (otherCombination) {
+            allCombinations.push(otherCombination)
+        })
+    }
 
-    badCombinations.map(function (combination, index) {
-        var arr = Array.from(combination)
-        nameArr = []
-        effArr = getCombinationEffects(combination)
-        arr.map(function (value) {
-            nameArr.push(value.name)
+    if(noNegatives !== "true" && (onlyExact !== "true" || lookingForNegatives === true) && onlyExact !== "true" ) {
+        badCombinations.map(function (combination, index) {
+            var arr = Array.from(combination)
+            nameArr = []
+            effArr = getCombinationEffects(combination)
+            arr.map(function (value) {
+                nameArr.push(value.name)
+            })
+            var tempPotion = new Potion(nameArr.join(', '), effArr.join(', '),"text-danger",0)
+            returnBadCombinations.push(tempPotion)
         })
-        var tempPotion = new Potion(nameArr.join(', '), effArr.join(', '),"text-danger",0)
-        allCombinations.push(tempPotion)
-    })
-    allCombinations = removeDuplicates(allCombinations)
+        returnBadCombinations = removeDuplicates(returnBadCombinations)
+        returnBadCombinations.forEach(function (badCombination) {
+            allCombinations.push(badCombination)
+        })
+    }
     return allCombinations
 }
 
@@ -450,8 +501,8 @@ function buildArguments(formData) {
     return returnArr
 }
 
-function start (lookForEffects) {
-    return validCombinations(getReags(lookForEffects), lookForEffects, allEffects)
+function start (lookForEffects, options) {
+    return validCombinations(getReags(lookForEffects), lookForEffects, allEffects, options)
 }
 
 module.exports = {
