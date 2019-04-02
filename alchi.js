@@ -1,3 +1,4 @@
+const fs= require('fs')
 const wirkungen = {
     leer: {
         name:"Leer",
@@ -382,7 +383,7 @@ const reags = [
         name: "Zitrone",
         preis: 5,
         wirkungen: [wirkungen.krankleicht, wirkungen.antigift, wirkungen.antifeuerres, wirkungen.leer]
-    },{
+    },,{
         name: "Zwiebeln",
         preis: 15,
         wirkungen: [wirkungen.schwaeche, wirkungen.antipara, wirkungen.energieschaden, wirkungen.krankres]
@@ -412,75 +413,158 @@ function reagentWithEffect(effect) {
       }
       return returnObj      
 }
+function onlyUnique(value, index, self) { 
+    
+    return self.indexOf(value) === index;
+}
+
+//returns false if duplicate found
+function checkForDuplicates(elements, value) {
+    var length = Object.keys(elements).length;
+    for(var i=0;i<length;i++) {
+        if(elements[i].name === value)  {
+            return false;
+        }
+    }
+    return true;
+}
+
 //Gibt eine Liste aller Reagenzien aus die mind. 1 der Wirkungen beinhalten
 function allPossibleReags(effects) {
     var obj = {}
     effects.forEach(function (wirkung) {
         tempObj = reagentWithEffect(wirkung)
         for(var x=0;x<Object.keys(tempObj).length;x++) {
-            var key = Object.keys(obj).length
-            obj[key] = {
-                name: tempObj[x].name,
-                preis: tempObj[x].preis,
-                wirkungen: tempObj[x].wirkungen
-            };
+            if(checkForDuplicates(obj, tempObj[x].name)) {
+                var key = Object.keys(obj).length
+                obj[key] = {
+                    name: tempObj[x].name,
+                    preis: tempObj[x].preis,
+                    wirkungen: tempObj[x].wirkungen
+                };
+            }
         }
     })
     return obj
 }
 
-function onlyUnique(value, index, self) { 
-    return self.indexOf(value) === index;
-}
-
 //Gibt ein Array mit allen Kombinationen möglicher Reagenzien aus
 function combinations(possibleReagents) {
-var returnArr = []
+var returnObj = new Array()
 var count =0;
 for(var w=0;w<Object.keys(possibleReagents).length;w++)
     for(var x=w;x<Object.keys(possibleReagents).length;x++) {
         for(var y=x;y<Object.keys(possibleReagents).length;y++) {
             for(var z=y;z<Object.keys(possibleReagents).length;z++) {
-                var arr2 = [w,x]
-                var arr3 = [w,x,y]
-                var arr4 = [w,x,y,z]
-                console.log(possibleReagents[x])
-                if(new Set(arr2).size == arr2.length) {
-                    returnArr[count] = new Array()
-                    returnArr[count]+= [possibleReagents[w],possibleReagents[x]]
-                    console.log(returnArr[count])
-                    console.log(count)
+                var distinctReagents = new Set([w,x,y,z])
+                distinctReagents = Array.from(distinctReagents)
+                if(distinctReagents.length > 1) {
                     
+                    var tempArr=new Array()
+                    distinctReagents.map(function (reagent) {
+                        tempArr.push(possibleReagents[reagent])
+                        })
+                    }
+                    returnObj[count] = tempArr
+                    count++
                 }
-                /*if(new Set(arr3).size == arr3.length) {
-                    returnArr[count] = new Array()
-                    returnArr[count]+= [w,x,y]
-                }
-                if(new Set(arr4).size == arr4.length) {
-                    returnArr[count] = new Array()
-                    returnArr[count]+= [w,x,y,z]
-                }*/
-                count++
             }
         }
-    }
-    return returnArr.filter(onlyUnique)
-}
-
-function validCombinations(combinations, effects, reags) {
-    for(var x=0;x<combinations.length;x++) {
-        for(var y=0;y<combinations[x].length;y++) {
-            var tempArr = combinations[x].split(",")
-            //console.log(`1:${reags[tempArr[0]].name} 2:${reags[tempArr[1]].name}`)
-            
+    var returnObj = returnObj.filter(onlyUnique)
+    var newArr = []
+    returnObj.forEach(function (obj) {
+        if(obj !== undefined) {
+            newArr.push(obj)
         }
+    })
+    return newArr
+}
+
+function checkRequirements(requiredEffects, currentEffects) {
+    var returnCount = 0
+    var keys = Object.keys(currentEffects)
+    var effectArr = Array.from(Object.values(currentEffects))
+    requiredEffects.forEach(function (effect) {
+        if(currentEffects[effect] >= 2) {
+            returnCount++
+        }
+        else {
+            returnCount = false
+        }
+    })
+    if(returnCount==3) {
+        return true
+    }
+    else {
+        return false
     }
 }
-var lookForEffects = [wirkungen.staerke]
+
+function validCombinations(combinations, wantedEffects, allEffects) {
+    var requiredEffects = []
+    wantedEffects.map(function (effect) {
+        requiredEffects.push(effect.name)
+    }) 
+
+    var pureCombinations = []
+    var otherCombinations = []
+    var badCombinations = []
+    console.log(combinations.length)
+    combinations.map(function (combination, index) {
+        var arr = Array.from(combination)
+        var currentEffectList = {}
+
+        for(var y=0;y<arr.length;y++) {
+            for(var z=0;z<arr[y].wirkungen.length;z++) {
+                if(currentEffectList[(arr[y].wirkungen[z].name)] === undefined) {
+                    currentEffectList[(arr[y].wirkungen[z].name)] = 0;  
+                }
+                currentEffectList[(arr[y].wirkungen[z].name)]++            
+            }
+        }
+        
+        var anotherArr = []
+        if(requiredEffects.every(elem => Object.keys(currentEffectList).indexOf(elem) > -1) && checkRequirements(requiredEffects, currentEffectList)) {
+            var currentEffectArr = Array.from(Object.keys(currentEffectList))
+            currentEffectArr.forEach(function (currentEffect) {
+                allEffects.map(function (effect) {
+                if(currentEffectList[currentEffect] >= 2) {
+                    if(effect.name == currentEffect && effect.type == 0) {
+                        badCombinations.push(combination)
+                     }
+                     if(effect.name == currentEffect && effect.type == 1) {
+                        otherCombinations.push(combination)
+                     }
+                
+                    //console.log(`${currentEffect}: ${currentEffectList[currentEffect]}`)
+                    /////////console.log(allEffects[effect])
+                }
+            })
+            })
+        }
+    })
+    console.log("\nBad")
+    badCombinations.map(function (combination, index) {
+        var arr = Array.from(combination)
+        newArr = []
+        arr.map(function (value) {
+           newArr.push(value.name)
+        })
+        console.log(newArr.join(', '))
+    })
+    console.log("\nOther")
+    otherCombinations.map(function (combination, index) {
+        var arr = Array.from(combination)
+        newArr = []
+        arr.map(function (value) {
+           newArr.push(value.name)
+        })
+        console.log(newArr.join(', '))
+    })
+
+}
+var lookForEffects = [wirkungen.staerke, wirkungen.geschick, wirkungen.heilung]
+var allEffects = Object.values(wirkungen)
 var allPossibleReags = allPossibleReags(lookForEffects)
-
-var keks = combinations(allPossibleReags)
-
-var wurst = validCombinations(keks, lookForEffects, allPossibleReags)
-
-
+var combinations = combinations(allPossibleReags)
+var wurst = validCombinations(combinations, lookForEffects, allEffects)
