@@ -1,0 +1,26 @@
+{
+  "name": "alchitool",
+  "version": "1.0.0",
+  "description": "alchitool. ala.",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon src/server.js",
+    "test": "standard --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bele321/alchitool.git"
+  },
+  "author": "serge meyer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bele321/alchitool/issues"
+  },
+  "homepage": "https://github.com/bele321/alchitool#readme",
+  "dependencies": {
+    "dotenv": "^7.0.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10"
+  }
+}

@@ -1,0 +1,93 @@
+<%
+var effects = Object.keys(wirkungen)
+%>
+
+<body style="font-family: 'Arial'">
+    <header class="site-header sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="d-flex flex-grow-1">
+                <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
+                <a class="navbar-brand" href="#">
+                    <span class="d-none d-md-inline">alchiTool(beta)</span>
+                </a>
+                <div class="w-100 text-right">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse text-left ml-auto" id="myNavbar">
+                <form class="w-100" action="/" method="POST" encType="application/x-www-form-urlencoded">
+                    <div class="form-row mr-auto">
+                        <div class="col-md-10 pr-3">
+                            <div class="row px-0">
+                                <div class="col-md-2 form-group w-100 my-0 pr-1 pl-0">
+                                    <select class="form-control" name="effect[0]" id="courseInput"required>
+                                        <option value="0" selected>Bitte wählen</option>
+                                        <% { 
+                                            effects.forEach(function (name) {
+                                            %><option value="<%=name%>"><%=wirkungen[name].name%></option><%
+                                            })
+                                            %>
+                                        <% } %>
+                                    </select>
+                                </div>
+                                <div class="col-md-2 form-group w-100 my-0 pr-1 pl-0">
+                                    <select class="form-control" name="effect[1]" id="courseInput"required>
+                                        <option value="0" selected>Bitte wählen</option>
+                                        <% { 
+                                            effects.forEach(function (name) {
+                                            %><option value="<%=name%>"><%=wirkungen[name].name%></option><%
+                                            })
+                                            %>
+                                        <% } %>
+                                    </select>
+                                </div>
+                                <div class="col-md-2 form-group w-100 my-0 pr-1 pl-0">
+                                    <select class="form-control" name="effect[2]" id="courseInput"required>
+                                        <option value="0" selected>Bitte wählen</option>
+                                        <% { 
+                                            effects.forEach(function (name) {
+                                            %><option value="<%=name%>"><%=wirkungen[name].name%></option><%
+                                            })
+                                            %>
+                                        <% } %>
+                                    </select>
+                                </div>
+                                <div class="col-md-2 form-group w-100 my-0 pr-1 pl-0">
+                                    <select class="form-control" name="effect[3]" id="courseInput"required>
+                                        <option value="0" selected>Bitte wählen</option>
+                                        <% { 
+                                            effects.forEach(function (name) {
+                                            %><option value="<%=name%>"><%=wirkungen[name].name%></option><%
+                                            })
+                                            %>
+                                        <% } %>
+                                    </select>
+                                </div>
+                                <div class="col-md-4 form-group w-100 my-0 pr-1 pl-0 text-light">
+                                    <div class="row p-0 m-0">
+                                        <div class="col-12 form-group w-100 m-0 py-0 text-light">
+                                            <input type="checkbox" class="form-check-label" id="exampleCheck1" disabled>
+                                            <label class="form-check-label" for="exampleCheck1">Nur exakte</label>
+                                        </div>
+                                        <div class="col-12 form-group w-100 m-0 text-light">
+                                            <input type="checkbox" class="form-check-label" id="exampleCheck1" disabled>
+                                            <label class="form-check-label" for="exampleCheck1">Ohne negative</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 pl-3">
+                            <div class="row">
+                                <div class="col-md-12 form-group my-0 pl-0">
+                                        <button class="btn btn-primary btn-block">Suchen</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </nav> 
+    </header>

@@ -1,0 +1,194 @@
+{
+    "staerke": {
+        "name": "Staerke",
+        "type": 1
+    },
+    "intelligenz": {
+        "name": "Intelligenz",
+        "type":1
+    },
+    "geschick": {
+        "name": "Geschick",
+        "type":1
+    },
+    "heilung": {
+        "name": "Heilung",
+        "type":1
+    },
+    "feder": {
+        "name": "Feder",
+        "type":1
+    },
+    "nachtsicht": {
+        "name": "Nachtsicht",
+        "type":1
+    },
+    "feuerres": {
+        "name": "Feuerres",
+        "type":1
+    },
+    "energieres": {
+        "name": "Energieres",
+        "type":1
+    },
+    "giftres": {
+        "name": "Giftres",
+        "type":1
+    },
+    "magieres": {
+        "name": "Magieres",
+        "type":1
+    },
+    "physres": {
+        "name": "Physres",
+        "type":1
+    },
+    "krankres": {
+        "name": "Krankres",
+        "type":1
+    },
+    "saettigung": {
+        "name": "Saettigung",
+        "type":1
+    },
+    "haarwuchs": {
+        "name": "Haarwuchs",
+        "type":1
+    },
+    "zauberloesen": {
+        "name": "Zauberloesen",
+        "type":1
+    },
+    "unsichtbarkeit": {
+        "name": "Unsichtbarkeit",
+        "type":1
+    },
+    "krankleicht": {
+        "name": "Krankleicht",
+        "type":1
+    },
+    "antipara": {
+        "name": "Antipara",
+        "type":1
+    },
+    "mana": {
+        "name": "Mana",
+        "type":1
+    },
+    "erfrischung": {
+        "name": "Erfrischung",
+        "type":1
+    },
+    "antigift": {
+        "name": "Antigift",
+        "type":1
+    },
+    "schutz": {
+        "name": "Schutz",
+        "type":1
+    },
+    "krankschwer": {
+        "name": "Krankschwer",
+        "type":1
+    },
+    "last": {
+        "name": "Last",
+        "type":0
+    },
+    "tollpatsch": {
+        "name": "Tollpatsch",
+        "type":0
+    },
+    "schwaeche": {
+        "name": "Schwaeche",
+        "type":0
+    },
+    "schwachsinn": {
+        "name": "Schwachsinn",
+        "type":0
+    },
+    "hunger": {
+        "name": "Hunger",
+        "type":0
+    },
+    "schlaf": {
+        "name": "Schlaf",
+        "type":0
+    },
+    "haarausfall": {
+        "name": "Haarausfall",
+        "type":0
+    },
+    "infizieren": {
+        "name": "Infizieren",
+        "type":0
+    },
+    "antimana": {
+        "name": "Antimana",
+        "type":0
+    },
+    "antimagieres": {
+        "name": "Antimagieres",
+        "type":0
+    },
+    "antifeuerres": {
+        "name": "Antifeuerres",
+        "type":0
+    },
+    "antigiftres": {
+        "name": "Antigiftres",
+        "type":0
+    },
+    "antiphysres": {
+        "name": "Antiphysres",
+        "type":0
+    },
+    "antienergieres": {
+        "name": "Antienergieres",
+        "type":0
+    },
+    "antilife": {
+        "name": "Antilife",
+        "type":0
+    },
+    "energieschaden": {
+        "name": "Energieschaden",
+        "type":0
+    },
+    "feuerschaden": {
+        "name": "Feuerschaden",
+        "type":0
+    },
+    "halluzination": {
+        "name": "Halluzination",
+        "type":0
+    },
+    "kaltschaden": {
+        "name": "Kaltschaden",
+        "type":0
+    },
+    "saeureschaden": {
+        "name": "Saeureschaden",
+        "type":0
+    },
+    "giftschaden": {
+        "name": "Giftschaden",
+        "type":0
+    },
+    "blindheit": {
+        "name": "Blindheit",
+        "type":0
+    },
+    "schminke": {
+        "name": "Schminke",
+        "type":1
+    },
+    "paralyse": {
+        "name": "Paralyse",
+        "type":0
+    },
+    "enthuellung": {
+        "name": "Enthuellung",
+        "type":0
+    }
+}
