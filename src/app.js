@@ -27,7 +27,8 @@ app.post('/', async function (req, res) {
 app.get('*', async function(req, res) {
   res.render('pages/404', {
     req: req,
-    wirkungen: wirkungen
+    wirkungen: wirkungen,
+    selectedeffects:['0','0','0','0'],
   })
 })
 
